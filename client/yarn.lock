@@ -570,6 +570,13 @@
   resolved "https://registry.yarnpkg.com/@mui/core-downloads-tracker/-/core-downloads-tracker-5.15.10.tgz#616bfb54e3860268d56ff59cd187d47044d954f3"
   integrity sha512-qPv7B+LeMatYuzRjB3hlZUHqinHx/fX4YFBiaS19oC02A1e9JFuDKDvlyRQQ5oRSbJJt0QlaLTlr0IcauVcJRQ==
 
+"@mui/icons-material@^5.15.10":
+  version "5.15.10"
+  resolved "https://registry.yarnpkg.com/@mui/icons-material/-/icons-material-5.15.10.tgz#24f65945f8f02499e4da0213d6a12ac714305679"
+  integrity sha512-9cF8oUHZKo9oQ7EQ3pxPELaZuZVmphskU4OI6NiJNDVN7zcuvrEsuWjYo1Zh4fLiC39Nrvm30h/B51rcUjvSGA==
+  dependencies:
+    "@babel/runtime" "^7.23.9"
+
 "@mui/material@^5.15.10":
   version "5.15.10"
   resolved "https://registry.yarnpkg.com/@mui/material/-/material-5.15.10.tgz#6533ba53edbd0790dbc5bb7e9e173f6069ffd7e6"
@@ -661,6 +668,11 @@
   version "2.11.8"
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.8.tgz#6b79032e760a0899cd4204710beede972a3a185f"
   integrity sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==
+
+"@remix-run/router@1.15.1":
+  version "1.15.1"
+  resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.15.1.tgz#221fd31a65186b9bc027b74573485fb3226dff7f"
+  integrity sha512-zcU0gM3z+3iqj8UX45AmWY810l3oUmXM7uH4dt5xtzvMhRtYVhKGOmgOd1877dOPPepfCjUv57w+syamWIYe7w==
 
 "@rollup/rollup-android-arm-eabi@4.12.0":
   version "4.12.0"
@@ -2185,6 +2197,21 @@ react-refresh@^0.14.0:
   version "0.14.0"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.14.0.tgz#4e02825378a5f227079554d4284889354e5f553e"
   integrity sha512-wViHqhAd8OHeLS/IRMJjTSDHF3U9eWi62F/MledQGPdJGDhodXJ9PBLNGr6WWL7qlH12Mt3TyTpbS+hGXMjCzQ==
+
+react-router-dom@^6.22.1:
+  version "6.22.1"
+  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-6.22.1.tgz#cfa109d4b6b0a4d00bac179bc0ad2a6469455282"
+  integrity sha512-iwMyyyrbL7zkKY7MRjOVRy+TMnS/OPusaFVxM2P11x9dzSzGmLsebkCvYirGq0DWB9K9hOspHYYtDz33gE5Duw==
+  dependencies:
+    "@remix-run/router" "1.15.1"
+    react-router "6.22.1"
+
+react-router@6.22.1:
+  version "6.22.1"
+  resolved "https://registry.yarnpkg.com/react-router/-/react-router-6.22.1.tgz#a5ff849bfe709438f7e139421bb28138209662c7"
+  integrity sha512-0pdoRGwLtemnJqn1K0XHUbnKiX0S4X8CgvVVmHGOWmofESj31msHo/1YiqcJWK7Wxfq2a4uvvtS01KAQyWK/CQ==
+  dependencies:
+    "@remix-run/router" "1.15.1"
 
 react-transition-group@^4.4.5:
   version "4.4.5"
