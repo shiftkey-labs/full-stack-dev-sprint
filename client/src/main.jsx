@@ -3,8 +3,9 @@ import * as ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import Home from "./pages/Home";
-import Menu from "./pages/Menu";
-import Header from "./components/Header/Header";
+import Tasks from "./pages/Tasks";
+import { TasksProvider } from "./context/TasksContext";
+import Form from "./pages/Form";
 
 const router = createBrowserRouter([
   {
@@ -12,13 +13,19 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: "/menu",
-    element: <Menu />,
+    path: "/tasks",
+    element: <Tasks />,
+  },
+  {
+    path: "/add-task",
+    element: <Form />,
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <TasksProvider>
+      <RouterProvider router={router} />
+    </TasksProvider>
   </React.StrictMode>
 );
