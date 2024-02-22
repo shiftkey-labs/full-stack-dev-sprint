@@ -1,0 +1,46 @@
+/* Reset default body margin and padding */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent scrolling */
+ 
+}
+
+/* Fullscreen container for the calendar */
+.calendar-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+/* Adjust the .react-calendar size within the container */
+.react-calendar {
+  width: 100%;
+  height: 100%;
+  max-width: unset; /* Remove max-width restriction */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Adjust navigation and tiles to scale correctly */
+.react-calendar__navigation {
+  flex-grow: 0;
+}
+
+.react-calendar__month-view {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.react-calendar__month-view__days {
+  flex-grow: 1;
+}
+
+.react-calendar__tile {
+  height: 100%; /* Make tiles fill available height */
+}
