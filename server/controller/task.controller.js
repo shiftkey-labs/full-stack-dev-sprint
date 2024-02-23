@@ -12,8 +12,8 @@ export async function createTask(req, res) {
 
 export async function getAllTasks(req, res) {
   try {
-    const tasks = await Task.find({});
-    res.send(tasks);
+    const tasks = await Task.find();
+    res.status(200).send(tasks);
   } catch (error) {
     res.status(500).send(error);
   }

@@ -23,8 +23,8 @@ mongoose
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.error("Could not connect to MongoDB...", err));
 
-app.use("/api/tasks", taskRouter);
-app.use("/api/users", userRouter);
+app.use("/tasks/", taskRouter);
+app.use("/auth/", userRouter);
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);

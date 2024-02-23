@@ -1,8 +1,10 @@
 import React from "react";
 import "../styles/Header.css";
 import { Link } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 const Header = () => {
+  const { currentUser, logout } = useAuth();
   return (
     <nav className="navbar">
       <div className="navbar-logo">
@@ -15,6 +17,15 @@ const Header = () => {
         <li>
           <Link to="/add-task">New Task</Link>
         </li>
+        {currentUser ? (
+          <li>
+            <button onClick={logout}>Logout</button>
+          </li>
+        ) : (
+          <li>
+            <Link to="/auth">Login</Link>
+          </li>
+        )}
       </ul>
     </nav>
   );

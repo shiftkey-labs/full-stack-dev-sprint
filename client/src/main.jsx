@@ -6,6 +6,8 @@ import Home from "./pages/Home";
 import Tasks from "./pages/Tasks";
 import { TasksProvider } from "./context/TasksContext";
 import Form from "./pages/Form";
+import { AuthProvider } from "./context/AuthContext";
+import AuthForm from "./pages/AuthForm";
 
 const router = createBrowserRouter([
   {
@@ -20,12 +22,18 @@ const router = createBrowserRouter([
     path: "/add-task",
     element: <Form />,
   },
+  {
+    path: "/auth",
+    element: <AuthForm />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <TasksProvider>
-      <RouterProvider router={router} />
-    </TasksProvider>
+    <AuthProvider>
+      <TasksProvider>
+        <RouterProvider router={router} />
+      </TasksProvider>
+    </AuthProvider>
   </React.StrictMode>
 );
